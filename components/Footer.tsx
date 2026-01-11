@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-3 inline-block">
                   <div className="text-[30px] lg:text-[36px] leading-[48px] px-4 text-orange font-semibold">
-                    YowYob Inc. Ltd
+                    Zmarket
                   </div>
                 </Link>
                 <div className="flex items-center justify-center gap-x-2 mb-4 sm:mb-2">
@@ -126,7 +126,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color  hover:text-secondary"
                     >
                       {" "}
-                      Sell On Yowyob{" "}
+                      Sell On Zmarket{" "}
                     </a>
                   </li>
                   <li>
@@ -135,7 +135,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color  hover:text-secondary"
                     >
                       {" "}
-                      YowYob Delivery{" "}
+                      Zmarket Delivery{" "}
                     </Link>
                   </li>
                   <li>
@@ -229,7 +229,7 @@ const Footer = () => {
         <div className="bg-secondary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color  ">
-              © 2018 - 2023, YowYob. All rights reserved.            </p>
+              © 2025 - 2026, Zmarket. All rights reserved.            </p>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">

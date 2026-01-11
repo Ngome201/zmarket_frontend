@@ -9,22 +9,7 @@ import { DownArrow, SearchIcon } from "@/public/data/icons";
 const Hero = () => {
   return (
     <section className="relative bg-[var(--bg-1)] border-t lg:border-t-0">
-      <Image
-        priority
-        className="absolute rounded-3xl hidden xl:block w-[25%] top-0 right-0"
-        src="/img/yowyob/business1.svg"
-        width={508}
-        height={642}
-        alt="image"
-      />
-      <Image
-        priority
-        className="absolute hidden rounded-3xl lg:block w-[25%] left-0 bottom-0 z-20"
-        src="/img/yowyob/business2.svg"
-        width={508}
-        height={642}
-        alt="image"
-      />
+      
 
       <Image
         priority

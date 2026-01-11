@@ -18,13 +18,13 @@ import MobileMenu from "@/components/MobileMenu";
 export default function Home() {
   return (
     <main>
-      <HeaderTop />
-      {/* <CommonHeader /> */}
+      {/* <HeaderTop /> */}
+      <CommonHeader />
       <MobileMenu />
-      <Hero />
-      {/* <Category />
+      {/* <Hero /> */}
+      {/* <Category /> */}
       <Property />
-      <NewListing />
+      {/* <NewListing />
       <Services />
       <Calculate />
       <Benefit />

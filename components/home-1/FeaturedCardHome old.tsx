@@ -14,7 +14,7 @@ import toast, { Toaster } from "react-hot-toast";
 const notifyAdd = () => toast.success("Added to Wishlist.");
 const notifyRemove = () => toast.error("Removed From Wishlist.");
 
-const FeaturedCardHome1 = ({ item }: any) => {
+const FeaturedCardHomeOld = ({ item }: any) => {
   const [favourite, setFavourite] = useState(false);
   
   const handleFavorite = () => {
@@ -23,12 +23,16 @@ const FeaturedCardHome1 = ({ item }: any) => {
   };
   const {
     id,
-    name,
-    description,
-    phone,
     address,
+    area,
+    bath,
+    bed,
     img,
+    popular,
     price,
+    rooms,
+    title,
+    type,
   } = item;
   return (
     <div
@@ -77,6 +81,12 @@ const FeaturedCardHome1 = ({ item }: any) => {
               />
             </div>
           )}
+
+          <Link
+            href="/property-list"
+            className="absolute top-4 z-10 inline-block text-primary left-4 bg-white rounded-full py-2 px-4">
+            For {type}
+          </Link>
           <button
             onClick={handleFavorite}
             className="absolute z-10 inline-block text-primary top-4 right-4 rounded-full bg-white p-2.5 ">
@@ -86,28 +96,38 @@ const FeaturedCardHome1 = ({ item }: any) => {
               <HeartIconOutline />
             )}
           </button>
+          {popular && (
+            <span className="absolute">
+              <span className="inline-block py-2.5 px-9 text-sm font-medium rounded-t rounded-br bg-primary relative -left-4 bottom-5 text-white z-10 before:bg-[#2628A6] before:absolute before:w-2 before:h-2 before:rounded-bl-md before:-bottom-2 before:left-0 ">
+                Popular
+              </span>
+            </span>
+          )}
         </div>
         <div className="p-2 sm:p-4 lg:p-5">
-          <div className="flex items-center justify-between gap-1 mb-4 mt-5 sm:mt-3">
-            <div>
-              <i className="las la-map-marker-alt text-lg text-[#9C742B]"></i>
-              <span className="inline-block">{address.street} </span>
-            </div>
-            <div>
-              <i className="las la-phone text-lg text-[#9C742B]"></i>
-              <span className="inline-block">{phone} </span>
-            </div>
-            
+          <div className="flex items-center gap-1 mb-4 mt-5 sm:mt-3">
+            <i className="las la-map-marker-alt text-lg text-[#9C742B]"></i>
+            <span className="inline-block">{address} </span>
           </div>
-          <div>
-            <Link
-              href="property-details-1"
-              className="text-base sm:text-xl font-medium text-neutral-700 mb-4">
-              {name}
-            </Link>
-
-          </div>
-          
+          <Link
+            href="property-details-1"
+            className="text-base sm:text-xl font-medium text-neutral-700 mb-4">
+            {title}
+          </Link>
+          <ul className="flex flex-wrap divide-x divide-dashed justify-between mt-5">
+            <li className="flex flex-col px-1 sm:px-4 gap-2">
+              <i className="las la-city text-xl"></i>
+              <span className="block"> {rooms} Room </span>
+            </li>
+            <li className="flex flex-col px-1 sm:px-4 gap-2">
+              <i className="las la-bed text-xl"></i>
+              <span className="block"> {bed} Bed </span>
+            </li>
+            <li className="flex flex-col px-1 sm:px-4 gap-2">
+              <i className="las la-bath text-xl"></i>
+              <span className="block"> {bath} Bath </span>
+            </li>
+          </ul>
         </div>
         <div className="property-card__body py-0 mx-5">
           <div className=" border-t border-dashed"></div>
@@ -115,9 +135,8 @@ const FeaturedCardHome1 = ({ item }: any) => {
         <div className="px-2 sm:px-5 pb-5 pt-3">
           <div className="flex flex-wrap justify-between items-center">
             <span className="text-primary text-xl font-medium">
-              {price}
-              
-              <span className="text-base text-neutral-700"> XAF </span>
+              {price}XAF
+              <span className="text-base text-neutral-700"> /month </span>
             </span>
             <Link href="property-details-1" className="btn-outline">
               Read More
@@ -130,4 +149,4 @@ const FeaturedCardHome1 = ({ item }: any) => {
   );
 };
 
-export default FeaturedCardHome1;
+export default FeaturedCardHomeOld;
